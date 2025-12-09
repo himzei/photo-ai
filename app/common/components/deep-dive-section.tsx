@@ -140,7 +140,7 @@ export function DeepDiveSection({ newsItems }: DeepDiveSectionProps) {
               </div>
             </div>
             {/* 네비게이션 버튼 컨테이너 */}
-            <div className="absolute inset-0 pointer-events-none z-[100]">
+            <div className="absolute inset-0 pointer-events-none z-0">
               {/* 이전 버튼 */}
               <Button
                 variant="outline"
