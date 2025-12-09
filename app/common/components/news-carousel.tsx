@@ -204,8 +204,8 @@ export function NewsCarousel({ newsGroups }: NewsCarouselProps) {
         </div>
       </div>
 
-      {/* 네비게이션 버튼 - navigation(z-[100]) 아래에 위치하도록 z-index 제거 */}
-      <div className="flex items-center justify-between mt-2 px-4 relative -z-10 ">
+      {/* 네비게이션 버튼 */}
+      <div className="flex items-center justify-between mt-2 px-4 relative">
         {/* 이전 버튼 */}
         <Button
           variant="outline"
@@ -213,7 +213,7 @@ export function NewsCarousel({ newsGroups }: NewsCarouselProps) {
           onClick={scrollPrev}
           disabled={!prevBtnEnabled}
           className={cn(
-            "rounded-full relative z-0",
+            "rounded-full relative z-10",
             !prevBtnEnabled && "opacity-50 cursor-not-allowed"
           )}
           aria-label="이전 슬라이드"
@@ -222,7 +222,7 @@ export function NewsCarousel({ newsGroups }: NewsCarouselProps) {
         </Button>
 
         {/* 슬라이드 인디케이터 */}
-        <div className="flex items-center gap-2 relative z-0">
+        <div className="flex items-center gap-2 relative z-10">
           {newsGroups.map((_, index) => (
             <button
               key={index}
@@ -250,7 +250,7 @@ export function NewsCarousel({ newsGroups }: NewsCarouselProps) {
           onClick={scrollNext}
           disabled={!nextBtnEnabled}
           className={cn(
-            "rounded-full relative z-0",
+            "rounded-full relative z-10",
             !nextBtnEnabled && "opacity-50 cursor-not-allowed"
           )}
           aria-label="다음 슬라이드"
